@@ -147,6 +147,12 @@
 			<property name="illegalPattern" value="true" />
 			<property name="message" value="Trailing whitespace" />
 		</module>
+		<module name="com.puppycrawl.tools.checkstyle.checks.imports.IllegalImportCheck">
+			<property name="id" value="bannedJUnitJupiterImports"/>
+		    <property name="regexp" value="false" />
+			<property name="illegalClasses" value="^org\.junit\.jupiter\..+" />
+		</module>
+
 
 		<!-- Spring Conventions -->
 		<module name="io.spring.javaformat.checkstyle.check.SpringLambdaCheck">

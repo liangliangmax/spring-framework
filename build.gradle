@@ -1,5 +1,12 @@
 buildscript {
 	repositories {
+		maven { url 'https://maven.aliyun.com/repository/public/' }
+		maven { url "https://maven.aliyun.com/repository/gradle-plugin"}
+		maven { url 'https://maven.aliyun.com/repository/jcenter' }
+		maven { url 'https://maven.aliyun.com/repository/google' }
+		maven { url 'https://maven.aliyun.com/repository/central' }
+		maven { url 'https://maven.aliyun.com/repository/gradle-plugin' }
+
 		gradlePluginPortal()
 		maven { url "https://repo.spring.io/plugins-release" }
 	}
@@ -148,6 +155,12 @@ configure(allprojects) { project ->
 	}
 
 	repositories {
+		maven { url 'https://maven.aliyun.com/repository/public/' }
+		maven { url "https://maven.aliyun.com/repository/gradle-plugin"}
+		maven { url 'https://maven.aliyun.com/repository/jcenter' }
+		maven { url 'https://maven.aliyun.com/repository/google' }
+		maven { url 'https://maven.aliyun.com/repository/central' }
+		maven { url 'https://maven.aliyun.com/repository/gradle-plugin' }
 		mavenCentral()
 		maven { url "https://repo.spring.io/libs-spring-framework-build" }
 	}
@@ -216,7 +229,7 @@ configure(subprojects - project(":spring-build-src")) { subproject ->
 
 	javadoc {
 		description = "Generates project-level javadoc for use in -javadoc jar"
-
+		failOnError = false
 		options.encoding = "UTF-8"
 		options.memberLevel = org.gradle.external.javadoc.JavadocMemberLevel.PROTECTED
 		options.author = true
